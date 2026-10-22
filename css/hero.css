@@ -1,0 +1,216 @@
+/* ---------- Hero ---------- */
+
+.hero {
+    position: relative;
+
+    height: 600px;
+    padding: 0 48px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+/* ---------- Hero Content ---------- */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 50%;
+    max-width: 650px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-right: 40px;
+}
+
+.hero-intro {
+    margin: 0 0 14px;
+
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.hero h1 {
+    margin: 0;
+
+    color: var(--text);
+    font-size: clamp(64px, 7vw, 110px);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: 2px;
+}
+
+.hero h2 {
+    margin: 18px 0 0;
+
+    color: var(--accent);
+    font-size: clamp(24px, 3vw, 40px);
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.hero-description {
+    margin: 20px 0 0;
+
+    color: var(--text-muted);
+    font-size: 20px;
+}
+
+
+/* ---------- Hero Skills ---------- */
+
+.hero-skills {
+    margin-top: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    color: var(--text);
+    font-size: 15px;
+}
+
+
+/* ---------- Hero Button ---------- */
+
+.primary-button {
+    display: inline-block;
+    align-self: flex-start;
+
+    margin-top: 36px;
+    padding: 14px 24px;
+
+    border: 1px solid var(--accent);
+
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: 0.2s ease;
+}
+
+.primary-button:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+
+/* ---------- Hero Background Visual ---------- */
+
+.hero-visual {
+    position: absolute;
+    inset: 0;
+
+    z-index: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+
+/* ---------- Purple Grid ---------- */
+
+.hero-grid {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(180, 108, 255, 0.12) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(180, 108, 255, 0.12) 1px,
+            transparent 1px
+        );
+
+    background-size: 42px 42px;
+
+    /*
+        Keep the grid strongest on the right,
+        then gradually fade it towards the text.
+    */
+
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(0, 0, 0, 0.15) 18%,
+        rgba(0, 0, 0, 0.45) 40%,
+        black 70%,
+        black 100%
+    );
+
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(0, 0, 0, 0.15) 18%,
+        rgba(0, 0, 0, 0.45) 40%,
+        black 70%,
+        black 100%
+    );
+}
+
+
+/* ---------- Purple Glow ---------- */
+
+.hero-grid-glow {
+    position: absolute;
+
+    top: 50%;
+    right: -5%;
+
+    width: 75%;
+    height: 85%;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(155, 92, 255, 0.24) 0%,
+            rgba(155, 92, 255, 0.12) 35%,
+            rgba(155, 92, 255, 0.04) 55%,
+            transparent 75%
+        );
+
+    filter: blur(30px);
+
+    animation: grid-glow 6s ease-in-out infinite;
+}
+
+
+/* ---------- Glow Animation ---------- */
+
+@keyframes grid-glow {
+
+    0%,
+    100% {
+        opacity: 0.55;
+
+        transform:
+            translateY(-50%)
+            scale(0.95);
+    }
+
+    50% {
+        opacity: 0.9;
+
+        transform:
+            translateY(-50%)
+            scale(1.05);
+    }
+}

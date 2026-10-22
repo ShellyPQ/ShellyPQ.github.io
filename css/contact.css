@@ -1,0 +1,120 @@
+/* ---------- Contact Page ---------- */
+
+.contact-page {
+    min-height: 520px;
+    padding: 52px 48px 80px;
+}
+
+
+/* ---------- Contact Heading ---------- */
+
+.contact-heading {
+    max-width: 620px;
+}
+
+.contact-label {
+    margin: 0 0 12px;
+
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.contact-heading h1 {
+    margin: 0;
+
+    color: var(--text);
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.contact-intro {
+    max-width: 520px;
+    margin: 18px 0 0;
+
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* ---------- Contact Links ---------- */
+
+.contact-links {
+    max-width: 620px;
+    margin-top: 36px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+
+/* ---------- Contact Item ---------- */
+
+.contact-item {
+    padding: 18px 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    border: 1px solid var(--border);
+    background-color: var(--surface);
+
+    color: var(--text);
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+}
+
+
+/* ---------- Contact Icons ---------- */
+
+.contact-icon {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icon svg {
+    width: 28px;
+    height: 28px;
+
+    fill: var(--accent);
+}
+
+
+/* ---------- Contact Item Text ---------- */
+
+.contact-item-text span {
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.contact-item-text p {
+    margin: 7px 0 0;
+
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.contact-item:hover .contact-item-text p {
+    color: var(--text);
+}
